@@ -3,67 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🎉 Parth’s Birthday Portal</title>
+  <title>🎉 Nel-chan Wishes Parth</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-      color: white;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'UnifrakturCook', cursive;
+      background: url('https://i.pinimg.com/736x/2d/bd/ca/2dbdca1995833d21a5515d83f3dc8f9e.jpg') no-repeat right center;
+      background-size: cover;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.75);
+      min-height: 100vh;
+      padding: 60px 20px;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
-      text-align: center;
     }
 
-    h1 {
-      font-size: 40px;
-      color: #ff4d6d;
-      margin-bottom: 10px;
+    .chat-box {
+      max-width: 600px;
+      margin-left: 30px;
+      animation: fadeIn 1.5s ease forwards;
     }
 
-    p {
-      font-size: 18px;
-      max-width: 500px;
-      margin-bottom: 40px;
-    }
-
-    .btn {
-      padding: 12px 24px;
-      margin: 10px;
-      background: #ff4d6d;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
+    .bubble {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid #ff4d6d;
+      padding: 15px 20px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      max-width: 80%;
       box-shadow: 0 0 10px #ff4d6d;
-      transition: transform 0.2s;
-      text-decoration: none;
+      animation: slideIn 1s ease-out;
     }
 
-    .btn:hover {
-      transform: scale(1.1);
+    .nel {
+      align-self: flex-start;
+      border-left: 5px solid #ff4d6d;
+    }
+
+    .parth {
+      align-self: flex-end;
+      background-color: rgba(255, 255, 255, 0.08);
+      border-right: 5px solid #ffb3c6;
     }
 
     .footer {
-      position: absolute;
-      bottom: 20px;
+      text-align: center;
+      margin-top: 40px;
       font-size: 12px;
       color: #ffb3c6;
+      text-shadow: 1px 1px #000;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      0% { transform: translateX(-50px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <h1>🌟 Welcome, Parth!</h1>
-  <p>You've entered a secret portal from Soul Society. Choose your waifu encounter or birthday blessing from Nel-chan 💖</p>
+  <div class="overlay">
+    <div class="chat-box">
+      <div class="bubble nel">
+        Nel: “Paaaaarth-chaa~! It’s your birthday!! 🎉 Nel-chan is sooo happy!! 💖”
+      </div>
+      <div class="bubble parth">
+        Parth: “Hehe~ Thanks, Nel! I didn't expect a Soul Society surprise today 😳”
+      </div>
+      <div class="bubble nel">
+        Nel: “You're one year cooler and stronger, I bet your Bankai is ready!~ 🗡️✨”
+      </div>
+      <div class="bubble parth">
+        Parth: “Guess it's time I mastered the art of dropshipping *and* defeating Hollows 😤💼”
+      </div>
+      <div class="bubble nel">
+        Nel: “Just remember, I'm always cheering for you~! Happy Birthday again, Parth-chaa~ 💫”
+      </div>
+    </div>
 
-  <a href="nel.html" class="btn">🎀 Nel's Birthday Wish</a>
-  <a href="nel_convo.html" class="btn">💬 Nel x Parth Chat</a>
-
-  <div class="footer">Made with 💖 by Captain Aakash</div>
+    <div class="footer">
+      Made with 💖 by Captain Aakash
+    </div>
+  </div>
 </body>
 </html>
